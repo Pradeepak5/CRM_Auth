@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form-wrapper{
+  width: 40%;
+  margin: auto;
+}
+
+.form-wrapper label{
+  font-size: 1.5rem;
+}
+
+.form-wrapper button{
+  margin-top: 10px;
+  margin-left: 45%;
+}

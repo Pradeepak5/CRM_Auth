@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import {Routes,Route,Navigate} from 'react-router-dom';
+import AdminLogin from './components/AdminLogin';
+import EmployeeLogin from './components/EmployeeLogin';
+import ManagerLogin from './components/ManagerLogin';
+import Admin_Home from './components/Admin_Home';
+import Admin_Employee from './components/Admin_Employee';
+import Admin_AddManager from './components/Admin_AddManager';
+import Admin_AddEmployee from './components/Admin_AddEmployee';
+import Manager_Home from './components/Manager_Home';
+import Manager_AddEmployee from './components/Manager_AddEmployee';
+export const url ='http://localhost:8000'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+      <Route path='/' element={<AdminLogin />} />
+      <Route path='/admindashboard' element={<Admin_Home />} />
+      <Route path='/adminemployee' element={<Admin_Employee />} />
+      <Route path='/admin/add_manager' element={<Admin_AddManager />} />
+      <Route path='/admin/add_employee' element={<Admin_AddEmployee />} />
+      <Route path='/employee' element={<EmployeeLogin />}/>
+      <Route path='/manager' element={<ManagerLogin />}/>
+      <Route path='/manager/dashboard' element={<Manager_Home />}/>
+      <Route path='/manager/add_employee' element={<Manager_AddEmployee />}/>
+      <Route path='*' element={<Navigate to='/'/>}/>
+    </Routes>
+    </>
   );
 }
 
