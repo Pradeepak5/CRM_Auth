@@ -10,7 +10,8 @@ import Admin_AddEmployee from './components/Admin_AddEmployee';
 import Manager_Home from './components/Manager_Home';
 import Manager_AddEmployee from './components/Manager_AddEmployee';
 import Employee_Home from './components/Employee_Home';
-export const url = 'https://pradeepak5-crm.onrender.com' //'http://localhost:8000'
+import Admin_EditManager from './components/Admin_EditManager';
+export const url ='http://localhost:8000' //'https://pradeepak5-crm.onrender.com'
 
 
 

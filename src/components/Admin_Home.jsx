@@ -15,6 +15,20 @@ export default function Admin_Home() {
         sessionStorage.clear()
         navigate('/')
     }
+
+    const handleDelete = async (id) =>{
+      try{
+        const res = await fetch(`${url}/admin/${id}`, {
+          method: "DELETE"
+        });
+        const Data = await res.json();
+        console.log(Data);
+        toast.success(Data.message);
+      }catch(err){
+        console.log(err);
+        toast.error(err.response.Data.message);
+      }
+    }
   
     let getData = async()=>{
       try {
@@ -64,6 +78,7 @@ export default function Admin_Home() {
             <th>Email</th>
             <th>Mobile</th>
             <th>Role</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -75,6 +90,9 @@ export default function Admin_Home() {
                   <td>{e.email}</td>
                   <td>{e.mobile}</td>
                   <td>{e.role}</td>
+                  <td>
+                   <button style={{backgroundColor:'red',color:'white'}} onClick={()=>handleDelete(e._id)}>Delete</button>
+                   </td>
               </tr>
             })
           }
