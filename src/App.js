@@ -9,7 +9,8 @@ import Admin_AddManager from './components/Admin_AddManager';
 import Admin_AddEmployee from './components/Admin_AddEmployee';
 import Manager_Home from './components/Manager_Home';
 import Manager_AddEmployee from './components/Manager_AddEmployee';
-export const url = 'https://pradeepak5-crm.onrender.com' //'http://localhost:8000'
+import Employee_Home from './components/Employee_Home';
+export const url ='http://localhost:8000' //'https://pradeepak5-crm.onrender.com' 
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Route path='/admin/add_manager' element={<Admin_AddManager />} />
       <Route path='/admin/add_employee' element={<Admin_AddEmployee />} />
       <Route path='/employee' element={<EmployeeLogin />}/>
+      <Route path='/employeedashboard' element={<Employee_Home />}/>
       <Route path='/manager' element={<ManagerLogin />}/>
       <Route path='/manager/dashboard' element={<Manager_Home />}/>
       <Route path='/manager/add_employee' element={<Manager_AddEmployee />}/>

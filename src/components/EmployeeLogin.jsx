@@ -22,7 +22,7 @@ export default function EmployeeLogin() {
       console.log(res)
       toast.success(res.data.message)
       sessionStorage.setItem('token',res.data.token)
-      navigate('/')
+      navigate('/employeedashboard')
 
     } catch (error) {
       toast.error(error.response.data.message)

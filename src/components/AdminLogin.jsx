@@ -59,6 +59,12 @@ export default function AdminLogin() {
       </Button>
     </Form>
     </div>
+    <div style={{textAlign:'center'}}>
+    <h3>To Login</h3>
+    <h5>Admin mail : admin@gmail.com </h5>
+    <h5>Admin password : 12345</h5>
+    <h6>After admin login.... create employee and manager to view work demo</h6>
+    </div>
     </div>
   )
 }
